@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survivor</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="buttons.js"></script>
+        <script src="items.js"></script>
+        <script src="crafting.js"></script>
+        <script src="actions.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="text-alert"></div>
+        <div id="progress-bar"></div>
+        <div id="blackout"></div>
+        <div id="whiteout">YOU HEAR A WHIRLING OF ROTORS....<br>A HELICOPTER COMES INTO VIEW....<br>YOU HAVE BEEN RESCUED!</div>
+        <div id="game-frame">
+            
+            
+            <div id="status-bar">
+                <button id="suicide">Give Up</button>
+                <h4>Day <span id="day"></span></h4>
+                <p>Health: <span id="health"></span></p>
+                <p>Warmth: <span id="warmth"></span></p>
+                <p>Hunger: <span id="hunger"></span></p>
+                <p>Thirst: <span id="thirst"></span></p>
+                <p>Energy: <span id="energy"></span></p>
+                <h4><span id="time">06:00</span></h4>
+                <button id="sleep">Sleep</button>
+            </div>
+            <div id="inventory">
+                <h4>Fire - Fuel <span id="fire"></span></h4>
+                <h4>Shelter - Level <span id="shelter"></span></h4>
+                <h4 class="hide" id="signal-header">Distress Signal - Level <span id="signal"></span></h4>
+                <p><span id="axe"></span><br>
+                <span id="pickaxe"></span><br>
+                <span id="workbench" class="hide">Workbench</span><br>
+                <span id="firepit" class="hide">Firepit</span><br>
+                <span id="rucksack" class="hide">Rucksack</span></p>
+                <div id="inv-table"></div>
+            </div>
+            <div id="main-area">
+                <p id="gather">
+                    Gather: 
+                    <button id="gather-sticks" title="Twigs and sticks cover the forest floor">Gather Sticks</button>
+                    <button id="gather-rocks" title="Pebbles and stones litter the beach">Gather Rocks</button>
+                    <button id="gather-berries" title="Colorful berry bushes line the entrance to the forest">Gather Berries</button>
+                    <button id="gather-fiber" title="Small plants provide little fibers to tie things with" class="hide">Gather Fiber</button>
+                </p>
+                <p id="fire">
+                    Fire:
+                    <button id="light-fire">Light Fire</button>
+                    <button class="hide" id="stoke-fire" title="Add more fuel to the fire">Stoke Fire</button>
+                    <button class="hide" id="extinguish-fire" title="Put out the fire">Extinguish Fire</button>
+                    <button class="hide" id="upgrade-distress-signal" title="Make the distress signal large and more visible">Upgrade Distress Signal</button>
+                </p>
+                <p id="eat">
+                    Eat:
+                    <button id="eat-berry" title="A small, juicy snack">Eat Berry</button>
+                    <button id="eat-berry-juice">Drink Berry Juice</button>
+                    <button id="eat-raw-meat" class="hide" title="A primal meal">Eat Raw Meat</button>
+                    <button id="eat-cooked-meat" class="hide" title="It fills the stomach but drys the mouth">Eat Cooked Meat</button>
+                    <button id="drink-from-waterskin" class="hide" title="Quenches the thirst">Drink from Waterskin</button>
+                </p>
+                <p class="hide" id="shelter-manage">
+                    Shelter:
+                    <button id="build-shelter" title="Safe, Comforting... Home">Build Shelter</button>
+                    <button class="hide" id="upgrade-shelter" title="A rain collection system would improve the shelter">Upgrade Shelter</button>
+                    <button class="hide" id="collect-from-rain-barrel">Collect From Rain Barrel</button>
+                    <button class="hide" id="collect-from-garden">Collect From Garden</button>
+                </p>
+                <p class="hide" id="harvest">
+                    Harvest:
+                    <button id="harvest-log" title="Fallen trees are abundant in the forest">Harvest Logs</button>
+                    <button class="hide" id="harvest-tree">Harvest Trees</button>
+                    <button class="hide" id="harvest-stone" title="Rock outcrops in the cliff can be cut into stone">Harvest Stone</button>
+                    <button class="hide" id="harvest-metal">Harvest Metal</button>
+                </p>
+                <p class="hide" id="hunt">
+                    Hunt:
+                    <button class="hide" id="search-traps" title="Latches tied to a string, scattered about the forest">Search Traps</button>
+                    <button class="hide" id="hunt-small-game" title="Squirells, birds, chipmunks-all die before the spear">Hunt Small Game</button>
+                </p>
+                <p class="hide" id="explore">
+                    Explore:
+                    <button id="fill-waterskins" title="A freshwater spring sits atop the mountain">Fill Waterskins</button>
+                    <button class="hide" id="scavenge" title="This island is mysterious">Scavenge</button>
+                    <button class="hide" id="explore cave" title="Strange noises echo from inside the cave">Explore Cave</button>
+                    <button class="hide" id="search-for-ruins" title="A journal details of a special site somewhere on this island">Search for Ruins</button>
+                </p>
+            </div>
+            <div id="crafting">
+                <p id="recipe1" class="recipe" title="A stone on a stick">Stone Axe</p>
+                <p id="recipe2" class="recipe" title="Extracted from the pressure of your fists">Berry Juice</p>
+                <p id="recipe3" class="recipe hide">Stone Pickaxe</p>
+                <p id="recipe4" class="recipe hide" title="For advanced tools">Workbench</p>
+                <p id="recipe5" class="recipe hide" title="A place to cook things">Firepit</p>
+                <p id="recipe6" class="recipe hide">Spear</p>
+                <p id="recipe7" class="recipe hide">Trap</p>
+                <p id="recipe8" class="recipe hide">Cooked Meat</p>
+                <p id="recipe9" class="recipe hide" title="Furs tied together with fine fibers">Waterskin</p>
+                <p id="recipe10" class="recipe hide" title="A pack for carrying goods">Rucksack</p>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+    </body>
+</html>
